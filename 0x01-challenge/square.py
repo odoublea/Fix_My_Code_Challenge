@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """The Square Module."""
 
+
 class square():
-    
-    
+    """A square class."""
+
     def __init__(self, *args, **kwargs):
         """Initializing a square"""
         self.width = 0
@@ -21,6 +22,7 @@ class square():
 
     def __str__(self):
         return "{}/{}".format(self.width, self.height)
+
 
 if __name__ == "__main__":
     s = square(width=12, height=9)
