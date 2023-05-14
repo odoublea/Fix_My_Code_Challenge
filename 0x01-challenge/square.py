@@ -4,13 +4,11 @@ class square():
     
     
     def __init__(self, *args, **kwargs):
-        self.width = kwargs.get('width', 0)
-        self.height = kwargs.get('height', 0)
+        self.width = 0
+        self.height = 0
 
-        if self.width != self.height:
-            raise ValueError("Width and height must be the same")
-        #for key, value in kwargs.items():
-            #setattr(self, key, value)
+        for key, value in kwargs.items():
+            setattr(self, key, value)
 
     def area_of_my_square(self):
         """ Area of the square """
