@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+"""The Square Module."""
 
 class square():
     
     
     def __init__(self, *args, **kwargs):
+        """Initializing a square"""
         self.width = 0
         self.height = 0
 
