@@ -9,24 +9,20 @@ app = Flask(__name__)
 app.register_blueprint(app_views)
 
 
-@app.route("/api/status")
-def api_status():
-    # Get the current status of the API.
-    status = "UP"
-
-    # Set the content type to application/json.
-    response.headers["Content-Type"] = "application/json"
-
-    # Return the status as JSON.
-    return jsonify({"status": status})
-
-
 @app.errorhandler(404)
 def not_found(error):
     """ json 404 page """
     return make_response(jsonify({"error": "Not found"}), 404)
 
+@app.route('/status')
+def api_status():
+    status = 'UP'
+    # return app.status()
+
+    response.heasers["Content-Type"] = "application/json"
+    
+    return jsonify({"status": status})
 
 if __name__ == "__main__":
-    # python -m api.v1.app
+    # python -m api.v1.app 
     app.run(host="0.0.0.0", port=5000)
