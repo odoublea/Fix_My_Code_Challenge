@@ -4,23 +4,22 @@
 class square():
     """A square class"""
     
-    def __init__(self, *args, **kwargs):
+    def __init__(self, width):
         """Initialize class constructor"""
-        self.width = 0
-        self.height = 0
-
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+        try:
+            self.width = width
+        except Exception as e:
+            raise TypeError("width must be an integer")
 
     def area_of_my_square(self):
         """ Area of the square """
         return self.width * self.width
 
     def PermiterOfMySquare(self):
-        return (self.width * 2) + (self.height * 2)
+        return (self.width * 4)
 
     def __str__(self):
-        return "{}/{}".format(self.width, self.height)
+        return "{}/{}".format(self.width, self.width)
 
 if __name__ == "__main__":
 
