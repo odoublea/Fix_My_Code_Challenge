@@ -6,16 +6,11 @@ class Square():
     
     def __init__(self, *args, **kwargs):
         """ Initialize Square"""
-        try:
-            if len(args) == 1:
-                self.width = self.height = args[0]
-
-            else:
-                for key, value in kwargs.items():
-                    setattr(self, key, value)
-        except:
-            pass
-
+        # self.width = 0
+        # self.height = 0
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+                    
     def area_of_my_Square(self):
         """ Area of the Square """
         return self.width * self.height
