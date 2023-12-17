@@ -1,18 +1,19 @@
 #!/usr/bin/python3
 
 class square():
-    
-    width = 0
-    height = 0
-
+    """A square class"""
     
     def __init__(self, *args, **kwargs):
+        """Initialize class constructor"""
+        self.width = 0
+        self.height = 0
+
         for key, value in kwargs.items():
             setattr(self, key, value)
 
     def area_of_my_square(self):
         """ Area of the square """
-        return self.width * self.height
+        return self.width * self.width
 
     def PermiterOfMySquare(self):
         return (self.width * 2) + (self.height * 2)
