@@ -4,12 +4,12 @@
 class Square():
     """ A Square class constructor"""
     
-    def __init__(self, *args, **kwargs):
+    def __init__(self, width=0, height=0):
         """ Initialize Square"""
-        # self.width = 0
-        # self.height = 0
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+        self.width = width
+        self.height = height
+        # for key, value in kwargs.items():
+        #     setattr(self, key, value)
                     
     def area_of_my_Square(self):
         """ Area of the Square """
